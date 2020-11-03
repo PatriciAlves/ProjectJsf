@@ -6,23 +6,49 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 
+	
 
-<h:head>
-	<title>Hello JSF</title>
-
+    <h:head>
+        <meta http-equiv="Content-Type"
+              content="text/html; charset=UTF-8" />
+        <h:outputStylesheet library="css" name="estilo.css"/>
+         <title>Page JSF</title>
 </h:head>
 
 <h:body>
-	<h:form id="formPerson">
-		<h1>Olá Programador, bem vindo a página JSF</h1>
+
+	  <div  class="overlay">
+	   <div class="con">
+   <!--     Start  header Content  -->
+ 
+   <header class="head-form">
+      <h2>Esta página foi feita com a tecnologia JSF</h2>
+      <!--     A welcome message or an explanation of the login form -->
+      <p>Faça seu login para acessar</p>
+   </header>
+         
+        </div>
+        </div>
+	<h:form id="formPerson" class="head-form">
+
 		
-		<h:commandButton value="Navegar " action="FirstPage"/>
-
-
-
-
+		<h1>Olá Programador, bem vindo a página JSF</h1>
+		<br>
+		</br>
+		LOGIN:
+		<p><h:inputText /></p>
+		SENHA:
+		<p><h:inputText/>   </p>
+		<br>
+		</br>
+		<ui:insert class="log-in">
+		<p>
+		<h:commandButton value="Navegar " action="FirstPage" />
+		</p>
+</ui:insert>
 
 	</h:form>
+
 
 </h:body>
 </html>
