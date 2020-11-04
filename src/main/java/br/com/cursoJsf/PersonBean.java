@@ -24,6 +24,7 @@ public class PersonBean {
 		
 		if (names.size() > 3) {
 			commandButton.setDisabled(true);
+			return "navegationpage";
 		}
 		
 		return "";
