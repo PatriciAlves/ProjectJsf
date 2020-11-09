@@ -13,6 +13,8 @@
               content="text/html; charset=UTF-8" />
         <h:outputStylesheet library="css" name="estilo.css"/>
          <title>Page JSF</title>
+       
+         
 </h:head>
 
 <h:body>
@@ -30,22 +32,22 @@
         </div>
         </div>
 	<h:form id="formPerson" class="head-form">
-
+	
 		
 		<h1>Olá Programador, bem vindo a página JSF</h1>
 		<br>
 		</br>
 		LOGIN:
-		<p><h:inputText /></p>
+		<p><h:inputText id="campName" value="#{personBean.name}"/></p>
 		SENHA:
-		<p><h:inputText/>   </p>
+		<p><h:inputSecret id="password" value="#{personBean.password}"/>   </p>
 		<br>
 		</br>
-		<ui:insert class="log-in">
+		
 		<p>
 		<h:commandButton value="Navegar " action="FirstPage" />
 		</p>
-</ui:insert>
+
 
 	</h:form>
 
