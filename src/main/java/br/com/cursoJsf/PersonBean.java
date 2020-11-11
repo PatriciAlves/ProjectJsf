@@ -20,9 +20,15 @@ public class PersonBean {
 	
 	public String save() {
 		
-		daoGeneric.save(person);
-		person = new Person();
+		person = daoGeneric.merge(person);
+		
 		return"";
+		
+	}
+	public String novo() {
+		person = new  Person();
+		
+		return "";
 		
 	}
 

@@ -16,6 +16,11 @@
 	<h:form id="formPerson">
 		<h1>Olá Programador, bem vindo a página JSF</h1>
 		
+		<h:outputLabel value="Id"/>
+		<h:inputText value="#{personBean.person.id}" readonly="true"/>
+		
+		<br/>
+		
 		<h:outputLabel value="Name:"/>
 		<h:inputText value="#{personBean.person.name}"/>
 		<br/>
@@ -27,6 +32,7 @@
 		<br/>
 		
 		<br/>
+		<h:commandButton value="Novo cadastro" action="#{personBean.novo}"/>
 		<h:commandButton value="Save" action="#{personBean.save}"/>
 
 
