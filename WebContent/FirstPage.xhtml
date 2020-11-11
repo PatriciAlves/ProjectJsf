@@ -15,24 +15,22 @@
 <h:body>
 	<h:form id="formPerson">
 		<h1>Olá Programador, bem vindo a página JSF</h1>
-		<p>
-			Name:
-			<h:inputText id="campoNome" value="#{personBean.name}" />
-
-		</p>
-		<h:commandButton binding="#{personBean.commandButton}" 
-		 value="Add Names" action="#{personBean.addName}"/>
 		
+		<h:outputLabel value="Name:"/>
+		<h:inputText value="#{personBean.person.name}"/>
+		<br/>
+		<h:outputLabel value="Last Name:"/>
+		<h:inputText value="#{personBean.person.lastname}"/>
+		<br/>
+		<h:outputLabel value="Age:"/>
+		<h:inputText value="#{personBean.person.age}"/>
+		<br/>
 		
-
-		<h:dataTable value="#{personBean.names}"  var="name">
-			<h:column>
-				<h:outputText value="#{name}" />
-			</h:column>
+		<br/>
+		<h:commandButton value="Save" action="#{personBean.save}"/>
 
 
 
-		</h:dataTable>
 
 	</h:form>
 

@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 @Entity
 public class Person implements Serializable {
 	
@@ -15,10 +17,16 @@ public class Person implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	private Long id;
+	
 	private String name;
+	
 	private String lastname;
+	
 	private Integer age;
+	
+	@Temporal(TemporalType.DATE)
 	private Date birth;
 	
 	public Person() {

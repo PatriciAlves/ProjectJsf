@@ -1,11 +1,13 @@
 package br.com.cursoJsf;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
-import javax.faces.component.html.HtmlCommandButton;
+
+
+import br.com.dao.DaoGeneric;
+import br.com.entities.Person;
 
 
 @ViewScoped
@@ -13,63 +15,32 @@ import javax.faces.component.html.HtmlCommandButton;
 
 public class PersonBean {
 	
+	private Person person = new Person();
+	private DaoGeneric<Person> daoGeneric = new DaoGeneric<Person>();
 	
-	private String password;
-	private String text;
-	private String name;
-	private HtmlCommandButton commandButton;
-	
-	private List<String> names = new ArrayList<String>();
-	
-	
-	public String addName() {
-		names.add(name);
+	public String save() {
 		
-		if (names.size() > 3) {
-			commandButton.setDisabled(true);
-			return "navegationpage?faces-redirect=true";
-		}
+		daoGeneric.save(person);
+		person = new Person();
+		return"";
 		
-		return "";
 	}
-	
-	public String getPassword() {
-		return password;
+
+	public Person getPerson() {
+		return person;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+
+	public void setPerson(Person person) {
+		this.person = person;
 	}
-	public String getText() {
-		return text;
+
+	public DaoGeneric<Person> getDaoGeneric() {
+		return daoGeneric;
 	}
-	public void setText(String text) {
-		this.text = text;
+
+	public void setDaoGeneric(DaoGeneric<Person> daoGeneric) {
+		this.daoGeneric = daoGeneric;
 	}
-	
-	public List<String> getNames() {
-		return names;
-	}
-	
-	
-	public void setNames(List<String> names) {
-		this.names = names;
-	}
-			
-	
-		public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public HtmlCommandButton getCommandButton() {
-		return commandButton;
-	}
-	public void setCommandButton(HtmlCommandButton commandButton) {
-		this.commandButton = commandButton;
-	}
-	
 	
 		
 }
