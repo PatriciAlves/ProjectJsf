@@ -26,6 +26,46 @@ public class Person implements Serializable {
 	
 	private Integer age;
 	
+	private String gender;
+	
+	private String[] frameworks;
+	
+	private Boolean active;
+	
+	
+	
+	
+	
+
+
+	public Boolean getActive() {
+		return active;
+	}
+
+	public void setActive(Boolean active) {
+		this.active = active;
+	}
+
+	public void setFrameworks(String[] frameworks) {
+		this.frameworks = frameworks;
+	}
+	
+	public String[] getFrameworks() {
+		return frameworks;
+	}
+	
+	
+	
+
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
 	@Temporal(TemporalType.DATE)
 	private Date birth;
 	

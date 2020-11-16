@@ -1,0 +1,55 @@
+@charset "ISO-8859-1";
+
+/* Definição de estilos para toda a tabela*/
+
+.tabela {
+
+     border: 1px solid green;
+
+}
+
+ 
+
+/* Definição de estilos para linha de cabeçalho da tabela*/
+
+.cabecalho {
+
+   text-align: center;
+
+   font: 12px Arial, sans-serif;
+
+   font-weight: bold;
+
+   color: Snow;
+
+   background:  #008B45;
+
+}
+
+ 
+
+/* Definição de estilos para coluna */
+
+.primeiro {
+
+   text-align: center;
+
+   font: 12px Arial, sans-serif;
+
+   background: #c8efad;
+
+}
+
+ 
+
+/* Definição de estilos para coluna */
+
+.ultimo {
+
+   font: 12px Arial, sans-serif;
+
+   text-align: center;
+
+   background: #BCEE68;
+
+}

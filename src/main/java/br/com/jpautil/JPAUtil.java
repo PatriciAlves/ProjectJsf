@@ -30,6 +30,9 @@ public class JPAUtil {
 	public static Object getPrimaryKey(Object entity) {
 		return factory.getPersistenceUnitUtil().getIdentifier(entity);
 	}
+	public static Object getPrimaryKeyObject(Object entity) {
+		return factory.getPersistenceUnitUtil().getIdentifier(entity);
+	}
 }
 
 		
