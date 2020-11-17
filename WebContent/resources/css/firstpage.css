@@ -4,7 +4,7 @@
 
 .tabela {
 
-     border: 1px solid green;
+     border: 1px solid blue;
 
 }
 
@@ -22,7 +22,7 @@
 
    color: Snow;
 
-   background:  #008B45;
+   background:  #0072a8;
 
 }
 
@@ -36,7 +36,7 @@
 
    font: 12px Arial, sans-serif;
 
-   background: #c8efad;
+   background: #f3be43;
 
 }
 
@@ -50,6 +50,6 @@
 
    text-align: center;
 
-   background: #BCEE68;
+   background: #7ad7fa;
 
 }

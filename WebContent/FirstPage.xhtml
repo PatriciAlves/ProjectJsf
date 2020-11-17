@@ -10,50 +10,70 @@
 <h:head>
 	<link rel="stylesheet" type="text/css"
 		href="resources/css/firstpage.css" />
-	<title>Hello JSF</title>
+	<title>Cadastro de usuario</title>
 
 </h:head>
 
 <h:body>
 	<h:form id="formPerson">
-		<h1>Hello Programmer, welcome to the JSF page</h1>
 
-		<h:graphicImage value="resources/img/jsf-logo.png"  style="width: 250px;"
-			heigth="200px;" />
+		<h2 style="color: blue; font-size: 25px; font-family: arial">Hello
+			Programmer, welcome to the JSF page</h2>
 
-		<h:panelGrid columns="2" width="250px" heigth="200px;">
+		<h:graphicImage value="resources/img/jsf-logo.png"
+			style="width: 250px;" heigth="200px;" />
+
+		<h:panelGrid columns="2" style="width: 250px; height:200px;">
 			<f:facet name="header">
 		Registration of new users:
 		</f:facet>
 
-			<h:outputLabel value="Id" />
-			<h:inputText value="#{personBean.person.id}" readonly="true" />
+			<h:outputLabel
+				style="color:blue; font-size: 16px; font-family: arial" value="Id:" />
+			<h:inputText value="#{personBean.person.id}"
+				style="border-radius: 6px; width: 177px;" readonly="true" />
 
 
-			<h:outputLabel value="Name:" />
-			<h:inputText value="#{personBean.person.name}" />
+			<h:outputLabel
+				style="color:blue; font-size: 16px; font-family: arial"
+				value="Name:" />
+			<h:inputText value="#{personBean.person.name}"
+				style="border-radius: 6px;width: 177px;" />
 
 
-			<h:outputLabel value="Last Name:" />
-			<h:inputText value="#{personBean.person.lastname}" />
+			<h:outputLabel
+				style="color:blue; font-size: 16px; font-family: arial"
+				value="Last Name:" />
+			<h:inputText value="#{personBean.person.lastname}"
+				style="border-radius: 6px; width: 177px;" />
 
 
-			<h:outputLabel value="Age:" />
-			<h:inputText value="#{personBean.person.age}" />
+			<h:outputLabel
+				style="color:blue; font-size: 16px; font-family: arial" value="Age:" />
+			<h:inputText value="#{personBean.person.age}"
+				style="border-radius: 6px;width: 177px;" />
 
-			<h:outputLabel value="Gender" />
+			<h:outputLabel
+				style="color:blue; font-size: 16px; font-family: arial"
+				value="Gender:" />
 
-			<h:selectOneMenu id="gender" value="#{personBean.person.gender}"  style="width:177px;">
-				<f:selectItem itemValue="null" itemLabel="[----Select----]"
+			<h:selectOneMenu id="gender" value="#{personBean.person.gender}"
+				style="width:177px;">
+				<f:selectItem itemValue="null" itemLabel="SELECIONE"
 					noSelectionOption="true" />
 				<f:selectItem itemValue="Male" />
 				<f:selectItem itemValue="Female" />
+
 			</h:selectOneMenu>
 
-			<h:outputLabel value="Frameworks: " />
-			
-			<h:selectManyMenu  id="campframe"  value="#{personBean.person.frameworks}" 
-			style="width: 177px; height:150px;">
+
+			<h:outputLabel
+				style="color:blue; font-size: 16px; font-family: arial"
+				value="Frameworks: " />
+
+			<h:selectManyMenu id="campframe"
+				value="#{personBean.person.frameworks}"
+				style="width: 177px; height:150px;">
 				<f:selectItem itemValue="Hibernate" />
 				<f:selectItem itemValue="Spring Mvc" />
 				<f:selectItem itemValue="JPA" />
@@ -65,27 +85,59 @@
 				<f:selectItem itemValue="Meteor" />
 				<f:selectItem itemValue="JQuery" />
 
-			
-			</h:selectManyMenu>
-			
-			<h:outputLabel value="Active:">
-			<h:selectBooleanCheckbox value="#{personBean.person.active}"/>
-			</h:outputLabel>
-			
-		
 
+			</h:selectManyMenu>
+
+			<h:outputLabel
+				style="color:blue; font-size: 16px; font-family: arial"
+				value="Active:" />
+			<h:selectBooleanCheckbox value="#{personBean.person.active}" />
+
+
+
+			<h:outputLabel
+				style="color:blue; font-size: 16px; font-family: arial "
+				value="Login: " />
+			<h:inputText style="border-radius: 6px;width: 177px;"
+				value="#{personBean.person.login}" />
+
+
+
+
+			<h:outputLabel
+				style="color:blue; font-size: 16px; font-family: arial"
+				value="Password:  " />
+			<h:inputSecret style="border-radius: 6px;width: 177px;"
+				value="#{personBean.person.senha}" />
+
+
+
+			<h:outputLabel
+				style="color:blue; font-size: 16px; font-family: arial"
+				value="Profile:" />
+
+			<h:selectOneMenu id="profile" value="#{personBean.person.perfilUser}"
+				style="width:177px;" required="false">
+				<f:selectItem itemLabel="SELECIONE" noSelectionOption="true" />
+				<f:selectItem itemValue="ADMINISTRADOR" itemLabel="Manager" />
+				<f:selectItem itemValue="SECRETARIO" itemLabel="Secretary" />
+				<f:selectItem itemValue="RECEPCIONISTA" itemLabel="Concierge" />
+
+			</h:selectOneMenu>
+			<h:outputLabel />
 		</h:panelGrid>
 		<p />
-		<h:outputLabel/>
-		
-		
-		<h:commandButton value="new register" action="#{personBean.novo}" />
-		<h:commandButton value="Save" action="#{personBean.save}" />
-		<h:commandButton value="Remover" action="#{personBean.remove}" />
-		<h:commandButton value="Clear" type="reset"/>
+		<h:commandButton value="new register" action="#{personBean.novo}"
+			style="border-radius: 6px;" />
+		<h:commandButton value="Save" action="#{personBean.save}"
+			style="border-radius: 6px;" />
+		<h:commandButton value="Remover" action="#{personBean.remove}"
+			style="border-radius: 6px;" />
+		<h:commandButton value="Clear" type="reset"
+			style="border-radius: 6px;" />
 
 
-		
+
 		<p />
 
 
@@ -120,18 +172,20 @@
 				</h:column>
 
 				<h:column>
-					<h:commandLink >
+					<h:commandLink>
 						<f:setPropertyActionListener value="#{person}"
-							target="#{personBean.person}"/>
-							<h:graphicImage value="resources/img/editar.png" style="width: 25px; height:25px;" title="Edit"/>
+							target="#{personBean.person}" />
+						<h:graphicImage value="resources/img/editar.png"
+							style="width: 25px; height:25px;" title="Edit" />
 					</h:commandLink>
 				</h:column>
 
 				<h:column>
 					<h:commandLink action="#{personBean.remove}">
 						<f:setPropertyActionListener value="#{person}"
-							target="#{personBean.person}"/>
-							<h:graphicImage value="resources/img/del.png" style="width: 25px; height:30px;" title="Delete"/>
+							target="#{personBean.person}" />
+						<h:graphicImage value="resources/img/del.png"
+							style="width: 25px; height:30px;" title="Delete" />
 					</h:commandLink>
 				</h:column>
 
